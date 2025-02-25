@@ -9,7 +9,6 @@ export default function HomePage() {
     <div className={classes.pageContainer}>
       <MenteeNavBar />
       <div className={classes.content}>
-        <Welcome />
         <ColorSchemeToggle />
       </div>
     </div>

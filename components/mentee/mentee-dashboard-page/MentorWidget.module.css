@@ -1,0 +1,50 @@
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 0;
+  gap: 40px;
+}
+
+.avatar {
+  width: 24%;
+  height: auto;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* New header container to position name and button */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Optional styling for the profile button */
+.profileButton {
+  margin-top: 0; /* Ensure the button aligns vertically with the text */
+  width: 40%;
+}
+
+.contactButton {
+  background-color: #00AEEF;
+  color: white;
+  width: 22%;
+}
+
+/* Card styling */
+.card {
+  padding: 40px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    4px 4px 10px rgba(0, 0, 0, 0.2);
+}
