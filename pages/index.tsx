@@ -1,6 +1,5 @@
-import { Container } from '@mantine/core';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '../components/Welcome/Welcome';
+import { Container, Button } from '@mantine/core';
+import Link from 'next/link';
 import { MenteeNavBar } from '@/components/mentee/mentee-navbar/MenteeNavBar';
 import classes from './index.module.css';
 
@@ -9,8 +8,19 @@ export default function HomePage() {
     <div className={classes.pageContainer}>
       <MenteeNavBar />
       <div className={classes.content}>
-        <Welcome />
-        <ColorSchemeToggle />
+        {/*Go to mentor*/}
+        <Link href="/mentee-dashboard" passHref>
+          <Button component="a" variant="outline" style={{ marginRight: '1rem' }}>
+            Mentee View
+          </Button>
+        </Link>
+
+        {/*Go to mentee*/}
+        <Link href="/mentor-dashboard" passHref>
+          <Button component="a" variant="filled">
+            Mentor View
+          </Button>
+        </Link>
       </div>
     </div>
   );
