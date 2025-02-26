@@ -1,0 +1,6 @@
+.divider {
+    border: none;
+    border-top: 0.5px solid #ccc;
+    margin-top: 8px;
+    width: 100%;
+  }

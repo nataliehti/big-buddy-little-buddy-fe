@@ -18,11 +18,11 @@ import router, { useRouter } from 'next/router';
 //items in the menu 
 const data = [
   { link: '/mentee-dashboard', label: 'Dashboard', icon: IconChartPie3 },
+  { link: '/mentee-mentor-info', label: 'My Mentor', icon: IconSchool },
   { link: '/mentee-tasks', label: 'My Tasks', icon: IconClipboardText },
-  { link: 'mentee-documents', label: 'Documents', icon: IconFileText },
-  { link: 'mentee-mentor-info', label: 'My Mentor', icon: IconSchool },
-  { link: 'mentee-network', label: 'Mentee Network', icon: IconFriends },
-  { link: 'mentee-settings', label: 'Settings', icon: IconSettings },
+  { link: '/mentee-resources', label: 'Resources', icon: IconFileText },
+  { link: '/mentee-network', label: 'Mentee Network', icon: IconFriends },
+  { link: '/mentee-settings', label: 'Settings', icon: IconSettings },
 ];
 
 
