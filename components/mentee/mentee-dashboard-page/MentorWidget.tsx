@@ -1,18 +1,24 @@
 import { Avatar, Button, Card, Group, Text, Badge } from '@mantine/core';
+import { useRouter } from 'next/router';
 import classes from './MentorWidget.module.css';
 
-//need to replace values with actual vals from json
 const stats = [
-  { value: '7', label: 'YOE' }, //years of experience
+  { value: '7', label: 'YOE' }, // years of experience
   { value: 'Executive', label: 'Level' },
 ];
 
 export function MentorWidget() {
+  const router = useRouter();
+
   const items = stats.map((stat) => (
     <Badge variant="light" key={stat.label} leftSection={stat.value}>
       {stat.label}
     </Badge>
   ));
+
+  const handleProfileRedirect = () => {
+    router.push('/mentee-mentor-info'); // Adjust this route to your target path
+  };
 
   return (
     <Card className={classes.card}>
@@ -24,25 +30,44 @@ export function MentorWidget() {
         />
         <div className={classes.details}>
           <div className={classes.header}>
-            <Text ta="left" fz="lg" fw={620} mt="sm">
+            <Text fz="lg" fw={620} mt="sm">
               Bill Headbanger
             </Text>
-            <Button radius="md" size="md" variant="default" className={classes.contactButton}>
+            {/* Desktop-only Contact button */}
+            <Button radius="md" variant="default" className={classes.contactButtonDesktop}>
               CONTACT
             </Button>
           </div>
-          <Text ta="left" fz="md" c="dimmed">
+          <Text fz="md" c="dimmed" className={classes.role}>
             Fullstack engineer
           </Text>
-          <Text ta="left" fz="sm">
-            Fullstack engineer
-          </Text>
-          <Group mt="md" justify="left" gap={30} mb="md">
+          <Group mt="md" gap={15} mb="md" className={classes.tags}>
             {items}
           </Group>
-          <Button radius="md" size="md" variant="default" className={classes.profileButton}>
+          {/* Desktop-only View Profile button */}
+          <Button
+            radius="md"
+            size="md"
+            variant="default"
+            className={classes.profileButtonDesktop}
+            onClick={handleProfileRedirect}
+          >
+            View Profile
+          </Button>
+          {/* Mobile-specific button group */}
+          <div className={classes.buttonsMobile}>
+            <Button radius="md" variant="default" className={classes.contactButtonMobile}>
+              CONTACT
+            </Button>
+            <Button
+              radius="md"
+              variant="default"
+              className={classes.profileButtonMobile}
+              onClick={handleProfileRedirect}
+            >
               View Profile
             </Button>
+          </div>
         </div>
       </div>
     </Card>
