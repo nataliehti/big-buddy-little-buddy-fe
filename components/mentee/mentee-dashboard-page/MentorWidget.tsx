@@ -8,13 +8,13 @@ const stats = [
 ];
 
 export function MentorWidget() {
-  const router = useRouter();
-
   const items = stats.map((stat) => (
     <Badge variant="light" key={stat.label} leftSection={stat.value}>
       {stat.label}
     </Badge>
   ));
+
+  const router = useRouter();
 
   const handleProfileRedirect = () => {
     router.push('/mentee-mentor-info'); // Adjust this route to your target path

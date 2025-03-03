@@ -30,7 +30,7 @@ function ProfileSummary() {
             <Text fz="md" className={classes.role}>
               Company Name
             </Text>
-            <Group mt="md" gap={15} mb="md" className={classes.tags}>
+            <Group  gap={5}  className={classes.tags}>
               {items}
             </Group>
             <Button radius="md" variant="default" className={classes.contactButton}>
