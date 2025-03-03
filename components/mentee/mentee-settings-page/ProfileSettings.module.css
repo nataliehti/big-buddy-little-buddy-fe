@@ -1,0 +1,45 @@
+.header {   
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), transparent);
+    margin-bottom: 120px;
+  }
+  
+    &:hover {
+      background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+    }
+
+  
+.tabsList {
+        display: flex;
+        justify-content: flex-start; /* Aligns tabs to the left */
+        
+        &::before {
+          display: none;
+        }
+}
+      
+  
+  .tab {
+    font-weight: 500;
+    height: 38px;
+    background-color: transparent;
+    position: relative;
+    bottom: -1px;
+  
+    &::before,
+    &::after {
+      background-color: light-dark(
+        var(--mantine-color-gray-2),
+        var(--mantine-color-dark-7)
+      ) !important;
+    }
+  
+    &:hover {
+      background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+    }
+  
+    &[data-active] {
+      background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+      border-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
+      border-bottom-color: transparent;
+    }
+  }

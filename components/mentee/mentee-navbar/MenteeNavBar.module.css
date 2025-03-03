@@ -57,7 +57,6 @@
   left: 0;
   height: 365px; /* Occupies full vertical height */
   width: 100%; /* Adjust width as needed */
-  background-color: #fff; /* Set a background color */
   z-index: 1000; /* A high z-index to ensure it overlaps the content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
