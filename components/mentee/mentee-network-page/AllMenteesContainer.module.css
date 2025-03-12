@@ -8,7 +8,7 @@
   .profileCard {
     background: #fff;
     border: 1px solid #ccc;
-    width: fit-content; /* Adjusts width to the content */
+    width: 300px; /* Fixed width for all cards */
     align-items: center;
     justify-content: center;
     margin-left: 15px;
@@ -25,19 +25,6 @@
       4px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
-  .bioCard{
-    background: #fff;
-    border: 1px solid #ccc;
-    width: fit-content; /* Adjusts width to the content */
-    align-items: left;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 8px;
-    box-shadow: 
-      inset 2px 2px 5px rgba(255, 255, 255, 0.8),
-      inset -2px -2px 5px rgba(0, 0, 0, 0.1),
-      4px 4px 10px rgba(0, 0, 0, 0.2);
-  }
   
   .tags{
     justify-content: center;
@@ -72,8 +59,10 @@
   }
   
   .avatar{
-    width: 12rem;
-    height: auto;
+    width: 12rem;      /* Fixed width */
+    height: 12rem;     /* Fixed height to match width */
+    border-radius: 50%;/* Makes the image circular */
+    object-fit: cover; 
   }
   
   .about{

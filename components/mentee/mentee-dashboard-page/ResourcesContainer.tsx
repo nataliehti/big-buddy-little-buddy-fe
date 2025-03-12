@@ -1,10 +1,10 @@
 import { Badge, Card, Group, Image, Text } from '@mantine/core';
 import classes from './ResourcesContainer.module.css';
 
-function Resource(pdf:string, img:string, tag:string, title:string, description:string) {
+function Resource(url: string, img: string, tag: string, title: string, description: string) {
   return (
     <a
-      href={pdf}  // Relative URL to the PDF in the public folder
+      href={url} // Using URL for linking
       target="_blank"
       rel="noopener noreferrer"
       style={{ textDecoration: 'none', color: 'inherit' }}
@@ -31,27 +31,27 @@ function Resource(pdf:string, img:string, tag:string, title:string, description:
   );
 }
 
+export function ResourcesContainer() {
+  const handbook = Resource(
+    "https://www.saigonchildren.com/about-us/vision-mission-values/",
+    "https://www.saigonchildren.com/wp-content/uploads/2023/10/IMG_2017-e1697609722160.jpg",
+    "Article",
+    "SaigonChildren: Our Mission",
+    "Learn about SaigonChildren's vision, mission, and values."
+  );
 
-export function ResourcesContainer(){
-    const handbook = Resource(
-        "/Mentee Handbook.pdf",
-        "https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80",
-        "Resource",
-        "Mentee Handbook",
-        "This mentee handbook is your essential guide to building successful mentoring relationships and navigating your professional growth journey."
-      );
-      const introArticle = Resource(
-        "/Mentee Handbook.pdf",
-        "https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80",
-        "Article",
-        "SaigonChildren: Big Buddy-Little Buddy",
-        "This mentee handbook is your essential guide to building successful mentoring relationships and navigating your professional growth journey."
-      );
-    
-      return (
-        <div className={classes.container}>
-            {handbook}
-            {introArticle}
-            </div>
-    );
+  const introArticle = Resource(
+    "https://www.saigonchildren.com/engage/volunteer/",
+    "https://www.saigonchildren.com/wp-content/uploads/2024/07/Main-website-article-cover-1.png",
+    "Article",
+    "SaigonChildren: Volunteer With Us",
+    "Learn how to become a volunteer as a student and how you can help us with our mission."
+  );
+
+  return (
+    <div className={classes.container}>
+      {handbook}
+      {introArticle}
+    </div>
+  );
 }

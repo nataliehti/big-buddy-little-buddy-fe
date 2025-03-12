@@ -20,7 +20,7 @@ function ProfileSummary() {
   return (
     <Card className={classes.profileCard}>
           <Avatar
-            src="https://media.istockphoto.com/id/1150742429/photo/asian-girl-taking-a-selfie-in-rain.jpg?s=612x612&w=0&k=20&c=SQITcq6XT-JTScQLFkTtvvj6yOpP04EPRUOq5Y-3-Hg="
+            src="https://img.freepik.com/free-photo/work-asian-business-woman-office-working-laptop_259150-59002.jpg"
             radius={0}
             className={classes.avatar}
           />
@@ -31,10 +31,10 @@ function ProfileSummary() {
             <Text fz="md" c="dimmed" className={classes.role}>
               Fullstack engineer
             </Text>
-            <Text fz="md" className={classes.role}>
+            <Text fz="md" mb="sm" className={classes.role}>
               Company Name
             </Text>
-            <Group  gap={5}  className={classes.tags}>
+            <Group mb="sm" gap={5}  className={classes.tags}>
               {items}
             </Group>
             <Button radius="md" variant="default" className={classes.contactButton}>
@@ -81,10 +81,7 @@ function Biography(){
         <Text fz="md" fw={620} mt="sm" mb="xs" className={classes.about}> Favorite Book </Text>
         <div className={classes.books}>
           <Card className={classes.smallCard}>
-            <img
-              src="https://m.media-amazon.com/images/I/910vYI-gm0L._AC_UF1000,1000_QL80_.jpg"
-              className={classes.img}
-            />
+              <IconBook className = {classes.icon }size={48} />
               <div className={classes.group}>
                 <Text fw={520}>The Mountains Sing</Text>
                 <Text fz="xs" fw={300}>By Nguyễn Phan Quế Mai</Text>

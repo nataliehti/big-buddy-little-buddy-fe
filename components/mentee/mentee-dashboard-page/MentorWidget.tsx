@@ -8,13 +8,13 @@ const stats = [
 ];
 
 export function MentorWidget() {
+  const router = useRouter();
+
   const items = stats.map((stat) => (
     <Badge variant="light" key={stat.label} leftSection={stat.value}>
       {stat.label}
     </Badge>
   ));
-
-  const router = useRouter();
 
   const handleProfileRedirect = () => {
     router.push('/mentee-mentor-info'); // Adjust this route to your target path
@@ -24,14 +24,14 @@ export function MentorWidget() {
     <Card className={classes.card}>
       <div className={classes.cardContent}>
         <Avatar
-          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png"
+          src="https://img.freepik.com/free-photo/work-asian-business-woman-office-working-laptop_259150-59002.jpg"
           radius={0}
           className={classes.avatar}
         />
         <div className={classes.details}>
           <div className={classes.header}>
             <Text fz="lg" fw={620} mt="sm">
-              Bill Headbanger
+              Serena Nguyen
             </Text>
             {/* Desktop-only Contact button */}
             <Button radius="md" variant="default" className={classes.contactButtonDesktop}>
@@ -50,7 +50,7 @@ export function MentorWidget() {
             size="md"
             variant="default"
             className={classes.profileButtonDesktop}
-            onClick={handleProfileRedirect}
+            onClick={handleProfileRedirect} 
           >
             View Profile
           </Button>

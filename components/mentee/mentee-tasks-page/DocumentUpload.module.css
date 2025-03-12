@@ -1,6 +1,12 @@
 .wrapper {
     position: relative;
-    margin-bottom: 30px;
+    background-color: rgb(247, 247, 247);
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border: 1px solid #ccc; /* Adds the outline */
+    border-radius: 10px;    /* Rounds the corners */
   }
   
   .dropzone {
@@ -13,8 +19,9 @@
   }
   
   .control {
-    position: absolute;
+    display: block;
     width: 250px;
-    left: calc(50% - 125px);
-    bottom: -20px;
+    margin: 20px auto; /* centers the button and adds space above it */
+    /* Remove position and bottom properties */
+    
   }
